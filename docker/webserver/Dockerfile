@@ -26,3 +26,5 @@ RUN apt-get update && apt-get install -y zlib1g-dev \
     && pecl install zmq-beta \
     && docker-php-ext-install zip \
     && docker-php-ext-enable zmq
+
+EXPOSE 8080:8080

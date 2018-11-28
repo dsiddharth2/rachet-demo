@@ -3,10 +3,7 @@
     var conn = new ab.Session('ws://localhost:8080',
         function() {
             conn.subscribe('kittensCategory', function(topic, data) {
-                console.log(topic);
                 console.log(data);
-                // This is where you would add the new article to the DOM (beyond the scope of this tutorial)
-                console.log('New article published to category "' + topic + '" : ' + data.title);
             });
         },
         function() {
